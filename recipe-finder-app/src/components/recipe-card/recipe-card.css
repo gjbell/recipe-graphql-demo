@@ -1,0 +1,13 @@
+.app-tags {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card {
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+.card:hover {
+  background-color: #eee;
+}

@@ -1,0 +1,36 @@
+.similar-recipes {
+  width: 30vw;
+  min-width: 300px;
+  max-height: 100vh;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  padding: 0px 20px;
+  position: sticky;
+  top: 0px;
+
+  box-shadow: -10px 0px 50px 1px #aaaaaa;
+}
+
+.similar-recipes li {
+  font-size: 1.1em;
+  padding-bottom: 5px;
+}
+
+.similar-recipes .header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.similar-recipes .header button {
+  background-color: lightsteelblue;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.similar-recipes .header button:hover {
+  background-color: gray;
+}

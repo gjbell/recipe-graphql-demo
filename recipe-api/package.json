@@ -1,0 +1,31 @@
+{
+  "name": "recipe-api",
+  "version": "0.0.1",
+  "description": "Recipe API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon --exec babel-node src/index.js",
+    "seedDb": "./node_modules/.bin/babel-node src/seed/seed-db.js"
+  },
+  "author": "Gareth Bell",
+  "license": "MIT",
+  "private": "true",
+  "dependencies": {
+    "apollo-boost": "^0.4.7",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.6.8",
+    "apollo-link-http": "^1.5.16",
+    "apollo-server": "^2.10.0",
+    "dotenv": "^8.2.0",
+    "graphql-tag": "^2.10.3",
+    "neo4j-driver": "^4.0.1",
+    "neo4j-graphql-js": "^2.12.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,24 @@
+type Recipe {
+  url: ID!
+  name: String!
+  instructions: [String]!
+  ingredients: [Ingredient] @relation(name: "REQUIRES", direction: "OUT")
+  similar: [Recipe]
+    @cypher(
+      statement: """
+      MATCH (recipe:Recipe)-[:REQUIRES]->(ingredient)
+      WITH {item:id(recipe), categories: collect(id(ingredient))} as userData
+      WITH collect(userData) as data
+      CALL algo.labs.ml.ann.stream('jaccard', data, {topK: 10})
+      YIELD item1, item2, similarity
+      WHERE algo.asNode(item1).url = {this}.url
+      return algo.asNode(item2)
+      ORDER BY similarity DESC
+      """
+    )
+}
+
+type Ingredient {
+  name: ID!
+  recipes: [Recipe] @relation(name: "REQUIRES", direction: "IN")
+}

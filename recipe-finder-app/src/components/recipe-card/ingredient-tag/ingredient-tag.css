@@ -1,0 +1,12 @@
+.ingredient-tag {
+  background-color: lightsteelblue;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin: 0px 5px 5px;
+
+  max-width: 15ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
